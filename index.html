@@ -11,10 +11,10 @@
         rel="stylesheet">
     <title>Class Schedule (M3B4_IT2)</title>
     <style>
-
         * {
             transition: all 0.3s ease-in-out !important;
         }
+
         body {
             padding: 20px;
             font-family: 'Roboto', sans-serif;
@@ -32,8 +32,8 @@
         }
 
         .dark-mode .table-striped th,
-        .dark-mode .table-striped td{
-            border-top: 1px  solid #ffc107;
+        .dark-mode .table-striped td {
+            border-top: 1px solid #ffc107;
             border-bottom: 1px solid #ffc107;
         }
 
@@ -42,7 +42,7 @@
             color: #fff;
         }
 
-        button {
+        #toggleModeBtn {
             border-radius: 20px !important;
             background-color: #2e2e2e !important;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
@@ -52,6 +52,7 @@
             border-radius: 20px !important;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
         }
+
         button:hover {
             color: #ffffff !important;
         }
@@ -75,7 +76,7 @@
     <div class="container">
         <h2 class="text-center my-4">Class Schedule (M3B4_IT2) </h2>
 
-        <div class="table-responsive p-3" >
+        <div class="table-responsive p-3">
             <table class="table  table-striped">
                 <thead>
                     <tr>
@@ -109,7 +110,7 @@
                             <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
                         </td>
                     </tr>
-                    
+
                     <!-- SECOND ROW -->
 
                     <tr>
@@ -188,6 +189,65 @@
                 button.style.setProperty('color', '#ffffff', 'important');
             }
         });
+
+        // Prevent right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            displayModal();
+        });
+
+        // Prevent F12 key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12' || e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) {
+                e.preventDefault();
+                displayModal();
+            }
+        });
+
+        // Prevent mouse right-click in different browsers
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 2) {
+                e.preventDefault();
+                displayModal();
+            }
+        });
+
+        // Disable touch and hold for mobile devices
+        document.addEventListener('touchstart', function (e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+                displayModal();
+            }
+        });
+
+
+        function displayModal() {
+            // Bootstrap modal
+            var modalHtml = '<div class="modal fade" id="disableModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">'
+                + '<div class="modal-dialog modal-dialog-centered" role="document">'
+                + '<div class="modal-content">'
+                + '<div class="modal-header">'
+                + '<h5 class="modal-title" id="modalLabel">Right Click Disabled</h5>'
+                + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'
+                + '<span aria-hidden="true">&times;</span>'
+                + '</button>'
+                + '</div>'
+                + '<div class="modal-body">'
+                + '<p>Right-click & F12 key are disabled for copyright purposes.</p>'
+                + '</div>'
+                + '<div class="modal-footer">'
+                + '<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>'
+                + '</div>'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+
+            // Append modal to body
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+            // Show the modal
+            $('#disableModal').modal('show');
+        }
     </script>
 </body>
 
