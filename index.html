@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Class Schedule</title>
+    <style>
+
+        * {
+            transition: all 0.3s ease-in-out !important;
+        }
+        body {
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .dark-mode {
+            background-color: #2e2e2e;
+            color: #fff;
+        }
+
+        .dark-mode th,
+        .dark-mode td {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .dark-mode .table-striped th,
+        .dark-mode .table-striped td{
+            border-top: 1px  solid #ffc107;
+            border-bottom: 1px solid #ffc107;
+        }
+
+        .btn-dark-mode {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        button {
+            border-radius: 20px !important;
+            background-color: #2e2e2e !important;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+        }
+
+        .table-responsive {
+            border-radius: 20px !important;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+        }
+        button:hover {
+            color: #ffffff !important;
+        }
+
+        @media (max-width: 991.98px) {
+            table {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            table {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center my-4">Class Schedule (M3B4_IT2) </h2>
+
+        <div class="table-responsive p-3" >
+            <table class="table  table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Time</th>
+                        <th class="text-center">Monday</th>
+                        <th class="text-center">Tuesday</th>
+                        <th class="text-center">Wednesday</th>
+                        <th class="text-center">Thursday</th>
+                        <th class="text-center">Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- FIRST ROW -->
+
+                    <tr>
+                        <td>7:30 AM-9:00 AM</td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                    </tr>
+                    
+                    <!-- SECOND ROW -->
+
+                    <tr>
+                        <td>9:00 AM-10:30 AM</td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                    </tr>
+
+                    <!-- THIRD ROW -->
+
+                    <tr>
+                        <td>10:00 AM-11:00 AM</td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                        <td>
+                            <strong>B185:</strong> FILI102 : Retorika (EDMEDHUB)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mb-3">
+            <button id="toggleModeBtn" class="btn dark-mode btn-sm px-3 mt-4">
+                Dark Mode <i class="btn-icon fas fa-toggle-off"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+    <script>
+        document.getElementById('toggleModeBtn').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            var icons = document.getElementsByClassName('btn-icon');
+            var button = document.getElementById('toggleModeBtn');
+
+            for (var i = 0; i < icons.length; i++) {
+                icons[i].classList.toggle('fa-toggle-off');
+                icons[i].classList.toggle('fa-toggle-on');
+            }
+
+            button.classList.toggle('btn-dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                button.style.setProperty('background-color', '#ffc107', 'important');
+                button.style.setProperty('color', '#000000', 'important');
+            } else {
+                button.style.removeProperty('background-color');
+                button.style.setProperty('color', '#ffffff', 'important');
+            }
+        });
+    </script>
+</body>
+
+</html>
